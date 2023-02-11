@@ -1,6 +1,12 @@
+# Version 0.2.0
+
+* Added functionality to substitute variables (#8).
+* Nicer formatting for markdown code blocks (#10 by @eitsupi).
+
 # Version 0.1.5
 
-* Update date field.
+* Update date field (The Date field is over a month old).
+
 # Version 0.1.4
 
 * `value()` by default coerces the config value to the same storage type as the default value when the default value is not `NULL`.

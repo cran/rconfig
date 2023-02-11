@@ -1,5 +1,6 @@
 Analythium
 CLI
+GetoptLong
 Gitpod
 INI
 JSON
@@ -21,4 +22,5 @@ kubectl
 optparse
 parsers
 repo
+rprintf
 yaml

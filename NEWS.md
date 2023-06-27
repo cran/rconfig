@@ -1,3 +1,8 @@
+# Version 0.3.0
+
+* Variable splitting did not consider the separator on the right hand side, now fixed.
+* Added new function `read_ini` to read INI configuration files.
+
 # Version 0.2.0
 
 * Added functionality to substitute variables (#8).

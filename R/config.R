@@ -1,6 +1,6 @@
 #' Manage R Configuration at the Command Line
 #'
-#' Manage R configuration using files (JSON, YAML, separated text)
+#' Manage R configuration using files (YAML, JSON, INI, TXT)
 #' JSON strings and command line arguments. Command line arguments
 #' can be used to provide commands and to override configuration.
 #' Period-separated command line flags are parsed as hierarchical
@@ -142,7 +142,6 @@
 #' value(CONFIG$test, FALSE) # unset
 #'
 #' @seealso [utils::modifyList()]
-#' @keywords models regression
 #' @name rconfig
 NULL
 
@@ -246,7 +245,7 @@ rconfig <- function(file = NULL,
         out <- flatten_list(out)
 
     ## trace
-    if (length(lists)) {
+    if (length(lists) > 0L) {
         rc <- if (length(lists) > 1L) {
             list(
                 kind = "merged",

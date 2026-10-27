@@ -4,10 +4,13 @@
 \alias{read_ini}
 \title{Read INI Files}
 \usage{
-read_ini(file, ...)
+read_ini(file, eval = NULL, ...)
 }
 \arguments{
 \item{file}{The name and path of the INI configuration file.}
+
+\item{eval}{Logical, whether to evaluate \code{!expr} expressions. If \code{NULL},
+use the \code{R_RCONFIG_EVAL} environment variable or \code{"rconfig.eval"} option.}
 
 \item{...}{Other arguments passed to the function (currently there is none).}
 }
@@ -16,9 +19,10 @@ The configuration value a named list,
 each element of the list being a section of the INI file.
 Each element (section) containing the key-value pairs from the INI file.
 When no value is provided in the file, the value is \code{""}.
-By convention, all values returned by the function are of character type.
-R expressions following \code{!expr} are evaluated according to the settings of
-the \code{R_RCONFIG_EVAL} environment variable or the option \code{"rconfig.eval"}.
+Literal values are returned as character vectors. R expressions following
+\code{!expr} are evaluated according to the settings of the \code{R_RCONFIG_EVAL}
+environment variable or the option \code{"rconfig.eval"}; their results retain
+the expression's type.
 }
 \description{
 Read INI (\code{.ini} file extension) configuration files.
@@ -40,16 +44,11 @@ Comments may appear on their own on an otherwise empty line, possibly indented.
 inifile <- system.file("examples", "example.ini", package = "rconfig")
 
 ## not evaluating R expressions
-op <- options("rconfig.eval" = FALSE)
-ini <- rconfig::read_ini(file = inifile)
+ini <- rconfig::read_ini(file = inifile, eval = FALSE)
 str(ini)
 
 ## evaluating R expressions
-options("rconfig.eval" = TRUE)
-ini <- rconfig::read_ini(file = inifile)
+ini <- rconfig::read_ini(file = inifile, eval = TRUE)
 str(ini)
-
-# reset options
-options(op)
 
 }

@@ -1,8 +1,8 @@
 Package: rconfig
 Type: Package
 Title: Manage R Configuration at the Command Line
-Version: 0.3.0
-Date: 2023-06-26
+Version: 0.3.1
+Date: 2026-10-25
 Authors@R: c(
   person(given = "Peter",
     family = "Solymos",
@@ -19,15 +19,16 @@ Description: Configuration management using files (YAML, JSON, INI, TXT),
 License: MIT + file LICENSE
 LazyLoad: yes
 Imports: yaml, jsonlite
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.3
 Encoding: UTF-8
 BugReports: https://github.com/analythium/rconfig/issues
 URL: https://github.com/analythium/rconfig
 Language: en-US
 NeedsCompilation: no
-Packaged: 2023-06-27 04:34:09 UTC; Peter
-Author: Peter Solymos [aut, cre] (<https://orcid.org/0000-0001-7337-1740>),
+Packaged: 2026-10-27 04:46:39 UTC; Peter
+Author: Peter Solymos [aut, cre] (ORCID:
+    <https://orcid.org/0000-0001-7337-1740>),
   Analythium Solutions Inc. [cph, fnd]
 Maintainer: Peter Solymos <peter@analythium.io>
 Repository: CRAN
-Date/Publication: 2023-06-27 10:30:02 UTC
+Date/Publication: 2026-10-27 07:20:02 UTC
